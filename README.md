@@ -43,6 +43,7 @@
 bridge-material-website/
 │
 ├── index.html            # Main portal (Hero, Services, Shop, Calculator, Simulator, Mosul Dam)
+├── about.html            # About Us page (History, Leadership, Certifications, 28-year timeline)
 ├── mosul-bridges.html    # Dedicated Case Study: Mosul's 5 Strategic Tigris River Bridges
 │
 ├── css/

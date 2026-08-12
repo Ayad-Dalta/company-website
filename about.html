@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About ApexBridge Heavy Civil & Structural Engineering - 25+ years of engineering excellence, certified materials manufacturing, geotechnical stabilization, and bridge load simulation.">
+  <title>About Us | ApexBridge Heavy Civil & Structural Engineering</title>
+  
+  <!-- FontAwesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <style>
+    /* Custom styling specific to About Page */
+    .about-hero {
+      padding: 140px 0 80px;
+      background: radial-gradient(circle at 50% 20%, rgba(0, 136, 255, 0.15), transparent 70%),
+                  radial-gradient(circle at 80% 80%, rgba(255, 107, 0, 0.1), transparent 50%),
+                  var(--bg-primary);
+      text-align: center;
+      position: relative;
+    }
+
+    .breadcrumbs {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      background: var(--glass-bg);
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-color);
+    }
+
+    .breadcrumbs a {
+      color: var(--brand-cyan);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .timeline-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding-left: 2rem;
+      border-left: 3px solid var(--brand-orange);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem 1.75rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      transition: var(--transition-normal);
+    }
+
+    .timeline-item:hover {
+      transform: translateX(6px);
+      border-color: var(--brand-orange);
+      box-shadow: var(--shadow-md);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.85rem;
+      top: 1.75rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--brand-orange);
+      border: 4px solid var(--bg-primary);
+      box-shadow: 0 0 10px var(--brand-orange);
+    }
+
+    .timeline-year {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: var(--brand-orange-light);
+      color: var(--brand-orange);
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.5rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .team-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand-orange), var(--brand-blue));
+      opacity: 0;
+      transition: var(--transition-fast);
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--brand-cyan);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .team-card:hover::before {
+      opacity: 1;
+    }
+
+    .team-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin: 0 auto 1.25rem;
+      background: var(--bg-card);
+      border: 3px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: var(--brand-orange);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .team-role {
+      color: var(--brand-cyan);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cert-badge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .cert-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      backdrop-filter: var(--glass-blur);
+    }
+
+    .cert-card i {
+      font-size: 2.25rem;
+      color: var(--brand-orange);
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html#home" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-bridge"></i></div>
+        <span>APEX<span style="color: var(--brand-orange);">BRIDGE</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#mosul-dam" class="nav-link">Mosul Dam</a></li>
+        <li><a href="mosul-bridges.html" class="nav-link">Mosul Fixed Bridges</a></li>
+        <li><a href="index.html#shop" class="nav-link">Materials Shop</a></li>
+        <li><a href="index.html#calculator" class="nav-link">Calculator</a></li>
+        <li><a href="index.html#simulator" class="nav-link">Physics Simulator</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <button id="cartBtn" class="btn-icon cart-btn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+
+        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('About Us Engineering Query')">
+          <i class="fa-solid fa-handshake"></i> Request RFQ
+        </button>
+
+        <button id="hamburgerBtn" class="hamburger-btn btn-icon" aria-label="Open Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div id="mobileBackdrop" class="modal-backdrop" style="z-index: 2190;"></div>
+  <div id="mobileNavDrawer" class="mobile-nav-drawer">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+      <div class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-bridge"></i></div>
+        <span>APEX<span style="color: var(--brand-orange);">BRIDGE</span></span>
+      </div>
+      <button id="closeMobileBtn" class="btn-icon"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-nav-links" style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+      <li><a href="index.html#home" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html" class="nav-link active"><i class="fa-solid fa-building"></i> About Us</a></li>
+      <li><a href="index.html#services" class="nav-link"><i class="fa-solid fa-gear"></i> Engineering Services</a></li>
+      <li><a href="index.html#mosul-dam" class="nav-link"><i class="fa-solid fa-water"></i> Mosul Dam Project</a></li>
+      <li><a href="mosul-bridges.html" class="nav-link"><i class="fa-solid fa-road"></i> Mosul Fixed Bridges</a></li>
+      <li><a href="index.html#shop" class="nav-link"><i class="fa-solid fa-cart-flatbed"></i> Materials Shop</a></li>
+      <li><a href="index.html#calculator" class="nav-link"><i class="fa-solid fa-calculator"></i> Structural Estimator</a></li>
+      <li><a href="index.html#simulator" class="nav-link"><i class="fa-solid fa-vial"></i> Physics Simulator</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Banner -->
+    <section class="about-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+          <span>Company & Leadership</span>
+        </div>
+
+        <h1 class="hero-title" style="font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; margin-bottom: 1.25rem;">
+          Engineering Resilience <br><span class="gradient-text">Across Continents</span>
+        </h1>
+        
+        <p class="hero-subtitle" style="max-width: 800px; margin: 0 auto 2.5rem; color: var(--text-secondary); font-size: 1.15rem;">
+          For over 25 years, ApexBridge has set the gold standard in heavy civil infrastructure, long-span bridge engineering, certified materials manufacturing, and geotechnical stabilization.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="#history" class="btn btn-primary"><i class="fa-solid fa-timeline"></i> Explore Our History</a>
+          <a href="#team" class="btn btn-outline"><i class="fa-solid fa-users"></i> Executive Leadership</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Impact Statistics -->
+    <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 3rem 0;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+          <div>
+            <div style="font-size: 3rem; font-weight: 800; color: var(--brand-orange); font-family: var(--font-heading);">450+</div>
+            <div style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Bridges Constructed & Restored</div>
+          </div>
+          <div>
+            <div style="font-size: 3rem; font-weight: 800; color: var(--brand-cyan); font-family: var(--font-heading);">12M+</div>
+            <div style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Tons Certified Steel Fabricated</div>
+          </div>
+          <div>
+            <div style="font-size: 3rem; font-weight: 800; color: var(--brand-blue); font-family: var(--font-heading);">100%</div>
+            <div style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Zero Structural Failure Record</div>
+          </div>
+          <div>
+            <div style="font-size: 3rem; font-weight: 800; color: var(--brand-teal); font-family: var(--font-heading);">35+</div>
+            <div style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Global Infrastructure Awards</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Core Capabilities -->
+    <section class="section" id="mission">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-compass"></i> Our Foundation</span>
+          <h2>Driven by Engineering Rigor & Uncompromised Safety</h2>
+          <p>We combine advanced finite element modeling (FEA) with heavy industrial manufacturing to deliver bridges engineered to withstand extreme seismic, hydraulic, and load stresses.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem;">
+          <div class="card" style="padding: 2.25rem;">
+            <div style="width: 55px; height: 55px; border-radius: var(--radius-md); background: var(--brand-orange-light); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-orange); margin-bottom: 1.25rem;">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem;">Structural Longevity Guarantee</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+              Every bridge design and structural steel batch is engineered for a minimum 100-year design life under severe environmental exposure, complying strictly with AASHTO LRFD and AISC codes.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 2.25rem;">
+            <div style="width: 55px; height: 55px; border-radius: var(--radius-md); background: var(--brand-blue-light); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue); margin-bottom: 1.25rem;">
+              <i class="fa-solid fa-mountain-sun"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem;">Geotechnical Mastery</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+              From deep karst foundation stabilization at the Mosul Dam to deep riverbed pier foundations in seismic fault zones, our geotechnical team resolves complex sub-surface challenges.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 2.25rem;">
+            <div style="width: 55px; height: 55px; border-radius: var(--radius-md); background: rgba(0, 240, 255, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-cyan); margin-bottom: 1.25rem;">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem;">Digital Twin & Live Simulation</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+              We deploy IoT strain gauges, fiber-optic tiltmeters, and real-time canvas physics solvers to continuously monitor bridge deflection and stress distribution in real time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company History & Timeline -->
+    <section class="section" id="history" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-clock-rotate-left"></i> Our Journey</span>
+          <h2>28 Years of Structural Breakthroughs</h2>
+          <p>Key milestones in the growth of ApexBridge from a regional steel fabricator to an international heavy civil engineering authority.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">1998</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Foundation in Pittsburgh, PA</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              ApexBridge was established in Pittsburgh's industrial heartland, focusing on high-strength ASTM A572 Grade 50 structural steel fabrication for river crossing trusses across the Midwest.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2006</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Prestressed Concrete & Bearing R&D Division</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Expanded capabilities with an automated prestressed concrete yard and a dedicated elastomeric seismic bearing laboratory, earning AISC Major Steel Bridge Certification with Fracture Critical Endorsement.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2014</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Digital FEA Engine & Sensor Monitoring</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Pioneered real-time structural health monitoring (SHM) systems for cable-stayed bridges, integrating IoT strain sensors with proprietary Finite Element Analysis (FEA) algorithms.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2019 - 2022</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Mosul Dam Geotechnical Stabilization</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Mobilized heavy drilling equipment to northern Iraq to stabilize the Mosul Dam's karstic limestone foundation through continuous high-pressure grout injection and automated sensor grids.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2023 - 2026</span>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Mosul Fixed Bridges Reconstruction & Procurement Portal</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Reconstructed all 5 strategic Tigris River bridges in Mosul, Iraq, and launched our direct-to-contractor digital bridge materials e-commerce procurement portal.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Leadership Team -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-user-tie"></i> Executive Leadership</span>
+          <h2>World-Class Structural & Geotechnical Engineers</h2>
+          <p>Meet the engineers and industry leaders directing our global design offices and field operations.</p>
+        </div>
+
+        <div class="team-grid">
+          
+          <div class="team-card">
+            <div class="team-avatar">
+              <i class="fa-solid fa-user-gear"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Dr. Eleanor Vance, PE, SE</h3>
+            <div class="team-role">Chief Executive Officer & Principal Structural Engineer</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Ph.D. in Structural Mechanics from MIT. 28+ years leading long-span cable-stayed and suspension bridge projects across North America and Europe.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 0.75rem; color: var(--text-muted);">
+              <a href="#" style="color: var(--text-secondary);"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" style="color: var(--text-secondary);"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar" style="color: var(--brand-cyan);">
+              <i class="fa-solid fa-helmet-safety"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Marcus Sterling, PE</h3>
+            <div class="team-role">VP of Geotechnical & Foundation Operations</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Specialist in karstic geology, deep caisson foundations, and high-pressure grout curtain remediation. Key lead on the Mosul Dam stabilization.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 0.75rem; color: var(--text-muted);">
+              <a href="#" style="color: var(--text-secondary);"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" style="color: var(--text-secondary);"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar" style="color: var(--brand-blue);">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Col. Tariq Al-Hassan</h3>
+            <div class="team-role">Middle East Regional Director & Reconstruction Lead</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Former military civil engineer directing heavy transport logistics, river span rapid installation, and municipal infrastructure restoration in Mosul, Iraq.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 0.75rem; color: var(--text-muted);">
+              <a href="#" style="color: var(--text-secondary);"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" style="color: var(--text-secondary);"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Certifications -->
+    <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-certificate"></i> Standards & Quality</span>
+          <h2>Certified Quality & Regulatory Compliance</h2>
+          <p>Our manufacturing plants, engineering software, and field operations adhere strictly to international civil engineering standards.</p>
+        </div>
+
+        <div class="cert-badge-grid">
+          <div class="cert-card">
+            <i class="fa-solid fa-award"></i>
+            <h4 style="font-weight: 700; margin-bottom: 0.4rem;">AISC Certified</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Major Steel Bridge Fabricator with Fracture Critical Endorsement</p>
+          </div>
+
+          <div class="cert-card">
+            <i class="fa-solid fa-road"></i>
+            <h4 style="font-weight: 700; margin-bottom: 0.4rem;">AASHTO Compliant</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Designed to LRFD Bridge Design Specifications (9th Edition)</p>
+          </div>
+
+          <div class="cert-card">
+            <i class="fa-solid fa-dumpster-fire"></i>
+            <h4 style="font-weight: 700; margin-bottom: 0.4rem;">AWS D1.5 Code</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Certified Bridge Welding Inspection (CWI) & Non-Destructive Testing</p>
+          </div>
+
+          <div class="cert-card">
+            <i class="fa-solid fa-file-contract"></i>
+            <h4 style="font-weight: 700; margin-bottom: 0.4rem;">ISO 9001:2015</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Certified Quality Management System across all manufacturing facilities</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: radial-gradient(circle at 50% 50%, rgba(255, 107, 0, 0.15), transparent 70%), var(--bg-primary); text-align: center;">
+      <div class="container">
+        <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem;">Ready to Partner on Your Next Bridge Project?</h2>
+        <p style="max-width: 650px; margin: 0 auto 2rem; color: var(--text-secondary); font-size: 1.1rem;">
+          Whether you need certified structural steel supply, FEA finite element audit, or turn-key bridge reconstruction, our engineering team is available 24/7.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="openConsultationModal('About Us Call To Action')">
+            <i class="fa-solid fa-handshake"></i> Request RFQ / Consultation
+          </button>
+          <a href="index.html#shop" class="btn btn-outline">
+            <i class="fa-solid fa-cart-flatbed"></i> Browse Materials Shop
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon"><i class="fa-solid fa-bridge"></i></div>
+            <span>APEX<span style="color: var(--brand-orange);">BRIDGE</span></span>
+          </a>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            ApexBridge Heavy Civil & Structural Engineering LLC is an international leader in long-span bridge construction, geotechnical stabilization, and certified materials manufacturing.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a href="index.html#services"><i class="fa-solid fa-chevron-right"></i> Engineering Services</a></li>
+            <li><a href="index.html#mosul-dam"><i class="fa-solid fa-chevron-right"></i> Mosul Dam Project</a></li>
+            <li><a href="mosul-bridges.html"><i class="fa-solid fa-chevron-right"></i> Mosul Fixed Bridges</a></li>
+            <li><a href="index.html#shop"><i class="fa-solid fa-chevron-right"></i> Certified Materials Shop</a></li>
+            <li><a href="index.html#calculator"><i class="fa-solid fa-chevron-right"></i> Structural Estimator</a></li>
+            <li><a href="index.html#simulator"><i class="fa-solid fa-chevron-right"></i> Physics Load Simulator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Engineering Divisions</h3>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Long-Span Truss & Suspension</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Prestressed Concrete Girders</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Geotechnical Grouting & Caissons</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Seismic Elastomeric Bearings</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> FEA Stress Audit & Diagnostics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Global Headquarters</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">
+            ApexBridge Global Engineering Plaza<br>
+            750 Structural Steel Way, Suite 1200<br>
+            Pittsburgh, PA 15222, USA<br>
+            <strong>Phone:</strong> +1 (800) 555-APEX-BRDG<br>
+            <strong>Email:</strong> contact@apexbridge-eng.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ApexBridge Heavy Civil & Structural Engineering LLC. All rights reserved. Compliant with AISC, AASHTO, AWS D1.5 & ISO 9001:2015.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Global Modal Backdrop & Drawer Containers
+       ========================================================================== -->
+  <div id="modalBackdrop" class="modal-backdrop">
+    <div id="modalContent" class="modal-box">
+      <!-- Dynamic modal content inserted via JS -->
+    </div>
+  </div>
+
+  <!-- Shopping Cart Slide-Over Drawer -->
+  <div id="cartBackdrop" class="modal-backdrop" style="z-index: 2090;"></div>
+  <div id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 style="font-size: 1.25rem; font-weight: 700;"><i class="fa-solid fa-cart-shopping" style="color: var(--brand-orange); margin-right: 0.5rem;"></i> Procurement Cart</h3>
+      <button id="closeCartBtn" style="font-size: 1.25rem; color: var(--text-muted);"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div id="cartItemsList" class="cart-items-list">
+      <!-- Cart items inserted dynamically -->
+    </div>
+
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem;">
+        <span>Subtotal:</span>
+        <strong id="cartSubtotal">$0.00</strong>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-size: 0.9rem;">
+        <span>Est. Heavy Freight Transport:</span>
+        <strong id="cartShipping">$0.00</strong>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 1.25rem; font-size: 1.15rem; color: var(--brand-orange); font-weight: 800;">
+        <span>Total Estimate:</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="openCheckoutModal()">
+        <i class="fa-solid fa-credit-card"></i> Proceed to Procurement Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/simulator.js"></script>
+
+</body>
+</html>
