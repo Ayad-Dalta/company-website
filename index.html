@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ApexBridge Heavy Civil & Structural Engineering - Certified Bridge Materials Shop, FEA Consultation, and Real-Time Bridge Stress Simulator.">
+  <title>ApexBridge | Engineering Consultation & Structural Bridge Materials</title>
+  
+  <!-- FontAwesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="header">
+    <div class="container">
+      <a href="#home" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-bridge"></i></div>
+        <span>APEX<span style="color: var(--brand-orange);">BRIDGE</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#shop" class="nav-link">Materials Shop</a></li>
+        <li><a href="#calculator" class="nav-link">Calculator</a></li>
+        <li><a href="#simulator" class="nav-link">Physics Simulator</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <button id="cartBtn" class="btn-icon cart-btn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+
+        <button class="btn btn-primary btn-sm" onclick="openConsultationModal()">
+          <i class="fa-solid fa-handshake"></i> Request RFQ
+        </button>
+
+        <button id="hamburgerBtn" class="hamburger-btn btn-icon" aria-label="Open Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div id="mobileBackdrop" class="modal-backdrop" style="z-index: 2190;"></div>
+  <div id="mobileNavDrawer" class="mobile-nav-drawer">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+      <a href="#home" class="logo" style="font-size: 1.25rem;">
+        <div class="logo-icon" style="width: 34px; height: 34px;"><i class="fa-solid fa-bridge"></i></div>
+        <span>APEX<span style="color: var(--brand-orange);">BRIDGE</span></span>
+      </a>
+      <button id="closeMobileNavBtn" style="font-size: 1.25rem; color: var(--text-muted);"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+      <li><a href="#home" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 600;">Home</a></li>
+      <li><a href="#services" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 600;">Engineering Services</a></li>
+      <li><a href="#shop" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 600;">Bridge Materials Shop</a></li>
+      <li><a href="#calculator" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 600;">Engineering Calculator</a></li>
+      <li><a href="#simulator" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 600;">Bridge Physics Simulator</a></li>
+      <li><a href="#portfolio" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 600;">Project Portfolio</a></li>
+    </ul>
+    <div style="margin-top: 3rem;">
+      <button class="btn btn-primary" style="width: 100%;" onclick="openConsultationModal()">
+        <i class="fa-solid fa-calendar-check"></i> Book Consultation
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="section-tag"><i class="fa-solid fa-shield-halved"></i> AASHTO & AISC CERTIFIED INFRASTRUCTURE</div>
+          <h1>Building Long-Span Bridges with <span class="text-gradient">Certified Precision</span></h1>
+          <p>ApexBridge provides licensed structural FEA consultation, seismic bridge design, and direct procurement of high-tensile weathering steel girders, cable stay strands, and elastomeric bearings.</p>
+          
+          <div class="hero-buttons">
+            <a href="#shop" class="btn btn-primary">
+              <i class="fa-solid fa-store"></i> Explore Materials Shop
+            </a>
+            <a href="#simulator" class="btn btn-secondary">
+              <i class="fa-solid fa-gamepad"></i> Try Physics Simulator
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3 id="statBridges">480+</h3>
+              <p>Bridges Designed</p>
+            </div>
+            <div class="stat-item">
+              <h3>1.45M</h3>
+              <p>Tons Steel Shipped</p>
+            </div>
+            <div class="stat-item">
+              <h3>34 Yrs</h3>
+              <p>Safety Milestone</p>
+            </div>
+            <div class="stat-item">
+              <h3>ISO 9001</h3>
+              <p>Certified QC</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-preview">
+            <img src="https://images.unsplash.com/photo-1477959858617-67f30ac4ce78?auto=format&fit=crop&w=1000&q=80" alt="Cable Stayed Bridge Infrastructure" class="hero-card-img">
+            <div class="hero-badge-float">
+              <div class="hero-badge-icon"><i class="fa-solid fa-award"></i></div>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">AISC Major Bridge Certified</strong>
+                <span style="font-size: 0.8rem; color: var(--text-secondary);">100% Traceable Mill Test Reports (MTR)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Services Section
+       ========================================================================== -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-compass-drafting"></i> CONSULTATION & ANALYSIS</div>
+        <h2>Heavy Civil Structural Engineering</h2>
+        <p>From non-linear dynamic FEA stress modeling to geotechnical borehole evaluation, our licensed PE/SE engineers ensure structural integrity.</p>
+      </div>
+
+      <div id="servicesGrid" class="services-grid">
+        <!-- Rendered dynamically via js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Materials E-Commerce Shop Section
+       ========================================================================== -->
+  <section id="shop" class="shop-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-boxes-packing"></i> CERTIFIED MATERIALS STORE</div>
+        <h2>Real Bridge Construction Supplies</h2>
+        <p>Order certified weathering steel girders, high-tensile stay strands, elastomeric expansion joints, and UHPC concrete admixtures online with direct site freight delivery.</p>
+      </div>
+
+      <div class="shop-controls">
+        <div class="shop-filters">
+          <button class="filter-btn active" data-filter="all">All Materials</button>
+          <button class="filter-btn" data-filter="steel-girders">Structural Steel</button>
+          <button class="filter-btn" data-filter="cables-tendons">Cable Stay Strands</button>
+          <button class="filter-btn" data-filter="bearings-joints">Bearings & Joints</button>
+          <button class="filter-btn" data-filter="concrete-additives">Concrete Additives</button>
+          <button class="filter-btn" data-filter="coatings-sealants">Marine Coatings</button>
+        </div>
+
+        <div class="shop-search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="shopSearchInput" placeholder="Search ASTM, AASHTO, or grade...">
+        </div>
+      </div>
+
+      <div id="productsGrid" class="products-grid">
+        <!-- Rendered dynamically via js/shop.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Engineering & Material Estimator Calculator
+       ========================================================================== -->
+  <section id="calculator" class="calc-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-calculator"></i> REAL-TIME ESTIMATOR</div>
+        <h2>Structural Engineering Calculator</h2>
+        <p>Input span length and AASHTO design load class to estimate required girder depth, section moment of inertia, steel weight, and procurement costs.</p>
+      </div>
+
+      <div class="calc-wrapper">
+        <div class="calc-grid">
+          <div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--brand-orange);">
+              <i class="fa-solid fa-sliders"></i> Bridge Design Parameters
+            </h3>
+            
+            <div class="form-group">
+              <label>Span Length (Meters)</label>
+              <input type="number" id="calcSpanLength" value="65" min="10" max="1500" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>AASHTO Design Load Specification</label>
+              <select id="calcLoadClass" class="form-control">
+                <option value="hl93" selected>AASHTO HL-93 Highway (36 Ton Semi-Trailer + Lane)</option>
+                <option value="cooper">Cooper E80 Heavy Freight Locomotive Rail</option>
+                <option value="urban">Light Urban Pedestrian & Transit Line</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Bridge Structural Superstructure Type</label>
+              <select id="calcBridgeType" class="form-control">
+                <option value="plate-girder" selected>Continuous Welded Plate Girder</option>
+                <option value="warren-truss">Warren Steel Truss Span</option>
+                <option value="cable-stayed">Cable-Stayed Twin Tower</option>
+                <option value="box-girder">Prestressed Concrete Box Girder</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Structural Steel Grade Selection</label>
+              <select id="calcSteelGrade" class="form-control">
+                <option value="a709" selected>ASTM A709 Grade 50W Weathering Steel ($2,450 / Ton)</option>
+                <option value="hps70w">High-Performance HPS 70W Steel ($3,100 / Ton)</option>
+                <option value="a572">ASTM A572 Grade 50 Structural Steel ($2,100 / Ton)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-results-card">
+            <div>
+              <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem; color: var(--brand-cyan);">
+                <i class="fa-solid fa-chart-pie"></i> Structural Output Estimates
+              </h3>
+
+              <div class="calc-metric-row">
+                <span>Recommended Min Girder Depth:</span>
+                <span id="resGirderDepth" class="calc-metric-val">3.61 meters</span>
+              </div>
+
+              <div class="calc-metric-row">
+                <span>Moment of Inertia (I<sub>x</sub>):</span>
+                <span id="resInertia" class="calc-metric-val">3,980 x 10³ cm⁴</span>
+              </div>
+
+              <div class="calc-metric-row">
+                <span>Estimated Steel Tonnage:</span>
+                <span id="resSteelWeight" class="calc-metric-val">795 Metric Tons</span>
+              </div>
+
+              <div class="calc-metric-row">
+                <span>Concrete Deck Volume:</span>
+                <span id="resConcreteVol" class="calc-metric-val">553 m³</span>
+              </div>
+
+              <div class="calc-metric-row" style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--brand-orange);">
+                <span style="font-size: 1.1rem; font-weight: 700;">Total Material Cost:</span>
+                <span id="resTotalCost" class="calc-metric-val" style="font-size: 1.5rem; color: var(--brand-orange);">$2,069,410</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" style="margin-top: 2rem; width: 100%;" onclick="addCalculatedSteelToCart()">
+              <i class="fa-solid fa-cart-plus"></i> Add Estimated Steel to Procurement Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Bridge Physics & Stress Load Simulator (Mini-Game)
+       ========================================================================== -->
+  <section id="simulator" class="sim-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-gamepad"></i> INTERACTIVE STRESS ENGINE</div>
+        <h2>Real Bridge Load & Physics Test</h2>
+        <p>Test bridge structural truss designs under heavy vehicle axle loads. Observe real-time member stress (Green = Tension, Yellow = Moderate Load, Red = Critical Failure).</p>
+      </div>
+
+      <div class="sim-container">
+        <div class="sim-header-bar">
+          <div class="sim-controls-top">
+            <label style="font-weight: 600;">Structure Preset:</label>
+            <select id="simPresetSelect" class="form-control" style="width: auto; padding: 0.5rem 1rem;">
+              <option value="warren-truss" selected>Warren Truss Bridge</option>
+              <option value="pratt-truss">Pratt Truss Highway</option>
+              <option value="arch-bridge">Through-Arch Bridge</option>
+            </select>
+
+            <label style="font-weight: 600; margin-left: 1rem;">Truck Payload:</label>
+            <select id="simVehicleWeight" class="form-control" style="width: auto; padding: 0.5rem 1rem;">
+              <option value="20">20 Tons (Light Truck)</option>
+              <option value="35" selected>35 Tons (Semi-Trailer)</option>
+              <option value="55">55 Tons (Heavy Crane)</option>
+              <option value="80">80 Tons (Extreme Payload)</option>
+            </select>
+          </div>
+
+          <button class="btn btn-secondary btn-sm" onclick="simReset()">
+            <i class="fa-solid fa-rotate-left"></i> Reset Bridge
+          </button>
+        </div>
+
+        <div class="sim-canvas-wrapper">
+          <canvas id="bridgeCanvas"></canvas>
+
+          <div class="sim-hud">
+            <div class="sim-hud-badge">
+              <i class="fa-solid fa-gauge-high" style="color: var(--brand-orange);"></i>
+              <span>Peak Stress: <strong id="simMaxStress" style="color: var(--brand-teal);">0%</strong></span>
+            </div>
+
+            <div style="display: flex; gap: 1rem;">
+              <div class="sim-hud-badge">
+                <i class="fa-solid fa-trophy" style="color: var(--brand-warning);"></i>
+                <span>Score: <strong id="simScore" style="color: var(--brand-cyan);">0</strong></span>
+              </div>
+              <div class="sim-hud-badge">
+                <i class="fa-solid fa-crown" style="color: var(--brand-orange);"></i>
+                <span>High Score: <strong id="simHighScore">0</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-controls-bottom">
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">
+            <i class="fa-solid fa-keyboard" style="color: var(--brand-orange); margin-right: 0.5rem;"></i>
+            <strong>Controls:</strong> Press <kbd>D</kbd> or <kbd>&rarr;</kbd> to Accelerate Truck | <kbd>Space</kbd> or <kbd>&uarr;</kbd> to Jump | <kbd>R</kbd> to Reset
+          </div>
+
+          <div class="mobile-game-pad">
+            <button class="game-btn" onclick="simAccelerate(-1)" title="Reverse"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="game-btn" onclick="simJump()" title="Jump"><i class="fa-solid fa-arrow-up"></i></button>
+            <button class="game-btn" onclick="simAccelerate(1)" title="Drive Forward"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Project Portfolio Section
+       ========================================================================== -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-city"></i> GLOBAL INFRASTRUCTURE</div>
+        <h2>Featured Bridge Projects</h2>
+        <p>Explore some of the world's most challenging long-span bridges engineered and supplied by ApexBridge.</p>
+      </div>
+
+      <div id="portfolioGrid" class="portfolio-grid">
+        <!-- Rendered dynamically via js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Testimonials & Certifications Section
+       ========================================================================== -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-star"></i> REPUTATION & ACCREDITATION</div>
+        <h2>Trusted by DOTs & Global Contractors</h2>
+        <p>What lead structural engineers and procurement directors say about partnering with ApexBridge.</p>
+      </div>
+
+      <div id="testimonialsGrid" class="services-grid" style="margin-bottom: 4rem;">
+        <!-- Rendered dynamically via js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ Accordion Section
+       ========================================================================== -->
+  <section class="shop-section">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-circle-question"></i> FREQUENTLY ASKED QUESTIONS</div>
+        <h2>Engineering & Supply FAQ</h2>
+      </div>
+
+      <div id="faqContainer">
+        <!-- Rendered dynamically via js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="logo" style="margin-bottom: 1.25rem;">
+            <div class="logo-icon"><i class="fa-solid fa-bridge"></i></div>
+            <span>APEX<span style="color: var(--brand-orange);">BRIDGE</span></span>
+          </a>
+          <p style="margin-bottom: 1.5rem; font-size: 0.95rem;">ApexBridge Heavy Civil & Structural Engineering is a global leader in long-span bridge consultation, FEA stress simulation, and certified AISC/AASHTO structural material supply.</p>
+          <div style="display: flex; gap: 1rem; font-size: 1.25rem;">
+            <a href="#" style="color: var(--brand-orange);"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" style="color: var(--brand-blue);"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" style="color: var(--brand-cyan);"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Engineering Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">FEA Structural Analysis</a></li>
+            <li><a href="#services">Geotechnical Foundation Design</a></li>
+            <li><a href="#services">Cable-Stayed Towers</a></li>
+            <li><a href="#services">Bridge Rehabilitation</a></li>
+            <li><a href="#services">BIM Digital Twin</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Materials Store</h4>
+          <ul class="footer-links">
+            <li><a href="#shop">Weathering Steel Girders</a></li>
+            <li><a href="#shop">High-Tensile Cable Strands</a></li>
+            <li><a href="#shop">Elastomeric Bearings</a></li>
+            <li><a href="#shop">Finger Expansion Joints</a></li>
+            <li><a href="#shop">UHPC Concrete Premix</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Headquarters</h4>
+          <p style="font-size: 0.9rem; line-height: 1.8; margin-bottom: 1rem;">
+            750 Structural Steel Parkway<br>
+            Pittsburgh, PA 15222, USA<br>
+            <strong>Phone:</strong> +1 (800) 555-APEX-BRDG<br>
+            <strong>Email:</strong> contact@apexbridge-eng.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ApexBridge Heavy Civil & Structural Engineering LLC. All rights reserved. Compliant with AISC, AASHTO, AWS D1.5 & ISO 9001:2015.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Global Modal Backdrop & Drawer Containers
+       ========================================================================== -->
+  <div id="modalBackdrop" class="modal-backdrop">
+    <div id="modalContent" class="modal-box">
+      <!-- Dynamic modal content inserted via JS -->
+    </div>
+  </div>
+
+  <!-- Shopping Cart Slide-Over Drawer -->
+  <div id="cartBackdrop" class="modal-backdrop" style="z-index: 2090;"></div>
+  <div id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 style="font-size: 1.25rem; font-weight: 700;"><i class="fa-solid fa-cart-shopping" style="color: var(--brand-orange); margin-right: 0.5rem;"></i> Procurement Cart</h3>
+      <button id="closeCartBtn" style="font-size: 1.25rem; color: var(--text-muted);"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div id="cartItemsList" class="cart-items-list">
+      <!-- Cart items inserted dynamically -->
+    </div>
+
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem;">
+        <span>Subtotal:</span>
+        <strong id="cartSubtotal">$0.00</strong>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-size: 0.9rem;">
+        <span>Est. Heavy Freight Transport:</span>
+        <strong id="cartShipping">$0.00</strong>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 1.25rem; font-size: 1.15rem; color: var(--brand-orange); font-weight: 800;">
+        <span>Total Estimate:</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="openCheckoutModal()">
+        <i class="fa-solid fa-credit-card"></i> Proceed to Procurement Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/simulator.js"></script>
+
+</body>
+</html>
