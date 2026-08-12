@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMobileNav();
   renderServices();
+  renderMosulDamSection();
   renderPortfolio();
   renderTestimonials();
   renderFAQ();
@@ -296,3 +297,125 @@ function handleConsultationSubmit(e) {
   closeGlobalModal();
   showToast('RFQ & Consultation submitted! A senior PE/SE engineer will contact you within 24 hours.', 'success');
 }
+
+/* ==========================================================================
+   Mosul Dam Mega-Project Renderer
+   ========================================================================== */
+function renderMosulDamSection() {
+  const container = document.getElementById('mosulDamContainer');
+  if (!container || !APEX_DATA.mosulDamProject) return;
+
+  const m = APEX_DATA.mosulDamProject;
+
+  container.innerHTML = `
+    <div class="mosul-card-wrapper">
+      <div class="mosul-grid">
+        <div class="mosul-content">
+          <div class="section-tag" style="background: rgba(0, 240, 255, 0.12); color: var(--brand-cyan); border-color: rgba(0, 240, 255, 0.3);">
+            <i class="fa-solid fa-water"></i> FEATURED MEGA-PROJECT SPOTLIGHT
+          </div>
+          <h2 style="font-size: 2.25rem; margin-bottom: 0.5rem;">${m.title}</h2>
+          <p style="color: var(--brand-orange); font-weight: 600; margin-bottom: 1.25rem; font-size: 1.1rem;">
+            <i class="fa-solid fa-location-dot"></i> ${m.location}
+          </p>
+          <p style="color: var(--text-secondary); margin-bottom: 1.75rem; font-size: 1.05rem; line-height: 1.7;">
+            ${m.overview}
+          </p>
+
+          <!-- Key Metrics Badges -->
+          <div class="mosul-stats-grid">
+            <div class="mosul-stat-box">
+              <span class="mosul-stat-val">${m.damHeight}</span>
+              <span class="mosul-stat-lbl">Dam Height</span>
+            </div>
+            <div class="mosul-stat-box">
+              <span class="mosul-stat-val">${m.crestLength}</span>
+              <span class="mosul-stat-lbl">Crest Length</span>
+            </div>
+            <div class="mosul-stat-box">
+              <span class="mosul-stat-val">${m.reservoirCapacity}</span>
+              <span class="mosul-stat-lbl">Reservoir Volume</span>
+            </div>
+            <div class="mosul-stat-box">
+              <span class="mosul-stat-val">${m.protectedPopulation}</span>
+              <span class="mosul-stat-lbl">Population Protected</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+            <button class="btn btn-primary" onclick="openMosulDamModal()">
+              <i class="fa-solid fa-file-pdf"></i> View Technical Case Study & Specs
+            </button>
+            <button class="btn btn-secondary" onclick="openConsultationModal('Mosul Dam Geotechnical Scope')">
+              <i class="fa-solid fa-handshake"></i> Consult on Similar Hydro Projects
+            </button>
+          </div>
+        </div>
+
+        <div class="mosul-visual">
+          <div class="mosul-img-wrapper">
+            <img src="${m.image}" alt="${m.title}" loading="lazy">
+            <div class="mosul-overlay-badge">
+              <i class="fa-solid fa-shield-halved" style="color: var(--brand-teal); font-size: 1.5rem;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Karst Geotechnical Grouting</strong>
+                <span style="font-size: 0.8rem; color: var(--text-secondary);">240m Continuous Grout Curtain</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hydro Services Grid -->
+          <div class="mosul-services-mini">
+            ${m.keyServices.map(s => `
+              <div class="mosul-service-item">
+                <i class="fa-solid ${s.icon}"></i>
+                <div>
+                  <strong>${s.title}</strong>
+                  <p>${s.desc}</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function openMosulDamModal() {
+  const m = APEX_DATA.mosulDamProject;
+  if (!m) return;
+
+  const modalBackdrop = document.getElementById('modalBackdrop');
+  const modalBox = document.getElementById('modalContent');
+  if (!modalBackdrop || !modalBox) return;
+
+  modalBox.innerHTML = `
+    <button class="modal-close" onclick="closeGlobalModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div style="margin-bottom: 1.5rem;">
+      <span class="section-tag" style="font-size: 0.75rem; padding: 0.25rem 0.75rem;"><i class="fa-solid fa-water"></i> GEOTECHNICAL CASE STUDY</span>
+      <h2 style="font-size: 1.6rem; margin-top: 0.5rem; margin-bottom: 0.35rem;">${m.title}</h2>
+      <p style="color: var(--brand-cyan); font-weight: 600; font-size: 0.9rem;">${m.location} | Project Value: ${m.budget}</p>
+    </div>
+    
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">${m.overview}</p>
+
+    <h4 style="color: var(--brand-orange); margin-bottom: 0.75rem;"><i class="fa-solid fa-boxes-packing"></i> Certified Materials & Engineering Quantities Shipped</h4>
+    <ul class="service-deliverables" style="margin-bottom: 1.5rem; background: var(--bg-primary); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+      ${m.materialsDelivered.map(item => `<li style="font-size: 0.9rem; margin-bottom: 0.4rem;"><i class="fa-solid fa-circle-check" style="color: var(--brand-teal);"></i> ${item}</li>`).join('')}
+    </ul>
+
+    <h4 style="color: var(--brand-cyan); margin-bottom: 0.75rem;"><i class="fa-solid fa-chart-line"></i> Safety & Real-Time Monitoring Protocols</h4>
+    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">ApexBridge implemented non-stop 24/7 piezometric pore-pressure sensing arrays and satellite synthetic aperture radar (InSAR) differential interferometry to monitor sinkhole formation risk in real-time.</p>
+
+    <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+      <button class="btn btn-secondary" onclick="closeGlobalModal()">Close</button>
+      <button class="btn btn-primary" onclick="closeGlobalModal(); openConsultationModal('Mosul Dam Grouting')">
+        <i class="fa-solid fa-calendar-check"></i> Book Engineering Consultation
+      </button>
+    </div>
+  `;
+
+  modalBackdrop.classList.add('active');
+}
+

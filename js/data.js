@@ -290,23 +290,66 @@ const APEX_DATA = {
       ]
     },
     {
-      id: "proj-003",
-      title: "Golden Gorge Arch Bridge Rehabilitation",
-      location: "Colorado Rockies, USA",
+      id: "proj-004",
+      title: "Mosul Dam Geotechnical Stabilization & Tigris Crest Bridge",
+      location: "Nineveh Governorate, Tigris River, Iraq",
       yearCompleted: 2025,
-      spanLength: "450 meters",
-      mainTowerHeight: "120 meter canyon depth",
-      bridgeType: "Steel Through-Arch Span",
-      budget: "$95 Million",
+      spanLength: "3.2 Kilometer Crest Span",
+      mainTowerHeight: "113 meters Dam Height",
+      bridgeType: "Heavy Civil Dam Crest Highway & Spillway Viaduct",
+      budget: "$410 Million",
       image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1200&q=80",
-      summary: "Lifespan extension project replacing the suspended deck with UHPC lightweight concrete and installing high-durability epoxy anti-corrosion barrier coatings.",
+      summary: "ApexBridge spearheaded the comprehensive geotechnical seepage analysis, high-pressure foundation grout curtain engineering, and crest access bridge structural reinforcement protecting 6+ million downstream citizens.",
       highlights: [
-        "50+ year lifespan extension achieved with zero extra dead weight",
-        "CFRP wrapping on steel arch pins boosted shear capacity by 40%",
-        "Awarded AASHTO Infrastructure Excellence Award 2025"
+        "240-meter deep high-pressure grout curtain injected into soluble gypsum strata",
+        "Automated InSAR satellite radar deformation & 3D FEA seepage monitoring",
+        "AISC certified spillway gate refurbishment and ASTM A709 steel girder bridge deck installation"
       ]
     }
   ],
+
+  mosulDamProject: {
+    title: "Mosul Dam & Tigris River Crest Viaduct",
+    subtitle: "Complex Geotechnical Grouting & Mega-Structure Stabilization",
+    location: "Tigris River Basin, Nineveh Governorate, Iraq",
+    damHeight: "113 meters (371 ft)",
+    crestLength: "3,200 meters (2.0 miles)",
+    reservoirCapacity: "11.1 Billion m³",
+    protectedPopulation: "6.5+ Million Citizens",
+    budget: "$410 Million",
+    completionYear: "2025",
+    image: "https://images.unsplash.com/photo-1477959858617-67f30ac4ce78?auto=format&fit=crop&w=1200&q=80",
+    overview: "Located on the Tigris River, Mosul Dam is one of the most hydro-geotechnically demanding water retaining structures in the world. Built over soluble karst gypsum, anhydrite, and limestone bedrock, the dam requires continuous advanced grout curtain injection and structural health monitoring.",
+    keyServices: [
+      {
+        icon: "fa-bore-hole",
+        title: "240m Deep Grout Curtain",
+        desc: "Automated high-pressure computerized grout mixing and injection of micro-fine cementitious slurry into deep soluble rock voids."
+      },
+      {
+        icon: "fa-satellite",
+        title: "Satellite InSAR & 3D FEA Seepage",
+        desc: "Real-time millimeter-accuracy radar displacement tracking coupled with non-linear finite element fluid seepage modeling."
+      },
+      {
+        icon: "fa-bridge-lock",
+        title: "Spillway & Crest Bridge Steel",
+        desc: "Structural overhaul of 4 giant radial spillway gates and installation of high-capacity ASTM A709 steel girders for heavy machinery crest transit."
+      },
+      {
+        icon: "fa-shield-heart",
+        title: "Downstream Safety Shield",
+        desc: "Ensured structural stability and risk mitigation for millions of residents along the Tigris River valley down to Baghdad."
+      }
+    ],
+    materialsDelivered: [
+      "65,000+ Metric Tons Micro-Fine Grout & Ultra-Dense Concrete",
+      "12,500 Metric Tons ASTM A709 Grade 50W Weathering Steel",
+      "8,500 Meters High-Tensile Anchor Tendons (1860 MPa)",
+      "45 Units AASHTO Certified Elastomeric Seismic Bearings"
+    ]
+  },
+
 
   testimonials: [
     {
