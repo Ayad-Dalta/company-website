@@ -348,7 +348,105 @@ const APEX_DATA = {
       "8,500 Meters High-Tensile Anchor Tendons (1860 MPa)",
       "45 Units AASHTO Certified Elastomeric Seismic Bearings"
     ]
+  mosulBridgesReconstruction: {
+    headline: "Rebuilding Mosul's Lifelines: The 5 Strategic Fixed Bridges of the Tigris",
+    subtitle: "Post-Conflict Infrastructure Rehabilitation & Structural Engineering Revival (2017 - 2026)",
+    overview: "During the 2016-2017 conflict in Mosul, all five strategic bridges spanning the Tigris River connecting East and West Mosul were rendered unpassable. In the post-war reconstruction era, ApexBridge contributed advanced finite element structural modeling, high-yield weathering steel girders, and seismic bearing pads to fully restore all 5 permanent fixed bridges, reconnecting 1.8+ million inhabitants and reviving regional trade.",
+    stats: {
+      totalBridgesRestored: "5 Strategic Arterials",
+      totalTigrisSpanMeters: "2,840 Meters",
+      steelGirdersSupplied: "24,500 Metric Tons",
+      dailyVehiclesRestored: "220,000+ Vehicles/Day"
+    },
+    bridges: [
+      {
+        id: "mosul-b1",
+        number: "1st Bridge",
+        name: "Al-Gisr Al-Ateeq (Old Iron Bridge)",
+        type: "Historic Steel Through-Truss Superstructure",
+        length: "305 meters",
+        builtOriginal: 1934,
+        rebuiltYear: 2018,
+        status: "Fully Restored & Operational",
+        image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80",
+        description: "The iconic Old Bridge connecting Old City Mosul (West Bank) to Al-Faisalya (East Bank). Reconstruction replaced severed steel truss spans with high-durability ASTM A709 Grade 50W weathering steel trusses while preserving its historic architectural profile.",
+        engineeringSpecs: [
+          "Replaced 3 collapsed truss sections (110m total span)",
+          "AASHTO HL-93 load testing passed @ 45-ton test vehicle load",
+          "Anti-corrosion marine polyurethane coating barrier applied"
+        ]
+      },
+      {
+        id: "mosul-b2",
+        number: "2nd Bridge",
+        name: "Al-Gisr Al-Hurriya (Freedom Bridge)",
+        type: "Prestressed Concrete Continuous Beam",
+        length: "340 meters",
+        builtOriginal: 1958,
+        rebuiltYear: 2019,
+        status: "Fully Restored & Operational",
+        image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+        description: "Central 4-lane arterial bridge handling heavy downtown commercial traffic. Pier 3 & Pier 4 underwater foundations were repaired using underwater non-shrink grout injection, topped with precast prestressed concrete box girders.",
+        engineeringSpecs: [
+          "Micro-fine cementitious grout underpinning of damaged piers",
+          "Installed 28 precast prestressed concrete beams (32m depth)",
+          "Elastomeric expansion bearing joints accommodating ±60mm expansion"
+        ]
+      },
+      {
+        id: "mosul-b3",
+        number: "3rd Bridge",
+        name: "Al-Gisr Al-Third (Al-Shuhada / Martyrs Bridge)",
+        type: "Multi-Span Concrete Girder Highway Bridge",
+        length: "420 meters",
+        builtOriginal: 1979,
+        rebuiltYear: 2021,
+        status: "Fully Restored & Operational",
+        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+        description: "Crucial medical transit link directly serving Mosul General Hospital and Mosul University. Reconstruction featured full deck slab replacement with Ultra-High Performance Concrete (UHPC) and stainless rebar reinforcement.",
+        engineeringSpecs: [
+          "UHPC overlay providing zero permeability deck barrier",
+          "Installation of high-tensile 1860 MPa post-tensioning tendons",
+          "Integrated smart strain-gauge sensor network for real-time health monitoring"
+        ]
+      },
+      {
+        id: "mosul-b4",
+        number: "4th Bridge",
+        name: "Al-Gisr Al-Rabi (Fourth Highway Bridge)",
+        type: "Dual-Carriageway Welded Plate Girder Span",
+        length: "620 meters",
+        builtOriginal: 1985,
+        rebuiltYear: 2023,
+        status: "Fully Restored & Heavy Transit Rated",
+        image: "https://images.unsplash.com/photo-1477959858617-67f30ac4ce78?auto=format&fit=crop&w=800&q=80",
+        description: "Heavy logistics double-carriageway crossing linking southern Mosul bypass to international trade routes. Restored using 3.5m deep custom welded plate girders and heavy seismic shock absorbers.",
+        engineeringSpecs: [
+          "10,500 Metric Tons of ASTM A709 Grade 50W steel girders",
+          "Seismic damper isolators rated for 0.35g peak ground acceleration",
+          "Dual 3-lane carriageway handling 85,000 vehicles daily"
+        ]
+      },
+      {
+        id: "mosul-b5",
+        number: "5th Bridge",
+        name: "Al-Gisr Al-Khamis (Fifth Strategic Bridge)",
+        type: "Long-Span Prestressed Segmental Viaduct",
+        length: "665 meters",
+        builtOriginal: 1989,
+        rebuiltYear: 2024,
+        status: "Fully Restored & Operational",
+        image: "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=800&q=80",
+        description: "The longest and newest bridge in Mosul, connecting the Northern Ring Road. Extensive structural reconstruction included balance cantilever box girder segment launching and complete pier foundation stabilization.",
+        engineeringSpecs: [
+          "Longest individual main span of 120m over deep Tigris channel",
+          "4,200m high-tensile stay strands (ASTM A416 Grade 270)",
+          "Modular finger expansion joints allowing up to 350mm longitudinal movement"
+        ]
+      }
+    ]
   },
+
 
 
   testimonials: [

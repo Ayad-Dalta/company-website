@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rebuilding Mosul's Strategic Fixed Bridges - Detailed Case Study on the 5 Tigris River Bridges Restored Post-Conflict by ApexBridge Engineering.">
+  <title>Mosul Fixed Bridges Reconstruction | ApexBridge Engineering</title>
+  
+  <!-- FontAwesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html#home" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-bridge"></i></div>
+        <span>APEX<span style="color: var(--brand-orange);">BRIDGE</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#mosul-dam" class="nav-link">Mosul Dam</a></li>
+        <li><a href="mosul-bridges.html" class="nav-link active">Mosul Fixed Bridges</a></li>
+        <li><a href="index.html#shop" class="nav-link">Materials Shop</a></li>
+        <li><a href="index.html#calculator" class="nav-link">Calculator</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <button id="cartBtn" class="btn-icon cart-btn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge">0</span>
+        </button>
+
+        <button class="btn btn-primary btn-sm" onclick="openConsultationModal('Mosul Bridges Reconstruction')">
+          <i class="fa-solid fa-handshake"></i> Request RFQ
+        </button>
+
+        <button id="hamburgerBtn" class="hamburger-btn btn-icon" aria-label="Open Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div id="mobileBackdrop" class="modal-backdrop" style="z-index: 2190;"></div>
+  <div id="mobileNavDrawer" class="mobile-nav-drawer">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+      <a href="index.html#home" class="logo" style="font-size: 1.25rem;">
+        <div class="logo-icon" style="width: 34px; height: 34px;"><i class="fa-solid fa-bridge"></i></div>
+        <span>APEX<span style="color: var(--brand-orange);">BRIDGE</span></span>
+      </a>
+      <button id="closeMobileNavBtn" style="font-size: 1.25rem; color: var(--text-muted);"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+      <li><a href="index.html#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="mosul-bridges.html" class="mobile-nav-link" style="color: var(--brand-orange); font-weight: 700;">Mosul Fixed Bridges</a></li>
+      <li><a href="index.html#services" class="mobile-nav-link">Engineering Services</a></li>
+      <li><a href="index.html#shop" class="mobile-nav-link">Materials Shop</a></li>
+    </ul>
+  </div>
+
+  <!-- ==========================================================================
+       Hero Banner - Mosul Bridges Revival
+       ========================================================================== -->
+  <section class="hero" style="padding-bottom: 4rem;">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+        <div class="section-tag" style="background: rgba(0, 240, 255, 0.12); color: var(--brand-cyan); border-color: rgba(0, 240, 255, 0.3);">
+          <i class="fa-solid fa-bridge-lock"></i> POST-CONFLICT HEAVY CIVIL ENGINEERING REVIVAL
+        </div>
+        <h1 style="font-size: 3.2rem; margin-bottom: 1.25rem;">
+          Rebuilding Mosul's Strategic <span class="text-gradient">Fixed Bridges</span>
+        </h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.7;">
+          During the 2016–2017 liberation of Mosul, all five historic bridges spanning the Tigris River were severely damaged or severed. Discover how ApexBridge's finite element structural analysis, AISC weathering steel girders, and post-tensioning tendons helped rebuild all 5 permanent fixed bridges reconnecting 1.8+ million citizens.
+        </p>
+
+        <!-- Stats Counter Bar -->
+        <div class="hero-stats" style="grid-template-columns: repeat(4, 1fr); max-width: 800px; margin: 0 auto;">
+          <div class="stat-item">
+            <h3>5 Bridges</h3>
+            <p>Strategic Spans Rebuilt</p>
+          </div>
+          <div class="stat-item">
+            <h3>2,840 m</h3>
+            <p>Total Tigris River Crossing</p>
+          </div>
+          <div class="stat-item">
+            <h3>24,500 T</h3>
+            <p>Weathering Steel Shipped</p>
+          </div>
+          <div class="stat-item">
+            <h3>220,000+</h3>
+            <p>Daily Vehicles Restored</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       The 5 Mosul Bridges Interactive Showcase
+       ========================================================================== -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-map-location-dot"></i> THE 5 STRATEGIC TIGRIS SPANS</div>
+        <h2>Mosul's 5 Restored Fixed Bridges</h2>
+        <p>Explore the engineering challenges, material solutions, and structural specifications of each permanent bridge rebuilt post-conflict.</p>
+      </div>
+
+      <div id="mosulBridgesList" class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 2.5rem;">
+        <!-- Rendered dynamically via script below -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Technical Engineering & Material Quantities
+       ========================================================================== -->
+  <section class="shop-section">
+    <div class="container">
+      <div class="calc-wrapper">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <div class="section-tag"><i class="fa-solid fa-boxes-packing"></i> CERTIFIED SUPPLY LOGISTICS</div>
+          <h2>Structural Materials Deployed for Mosul Reconstruction</h2>
+        </div>
+
+        <div class="calc-grid">
+          <div>
+            <h3 style="color: var(--brand-orange); margin-bottom: 1rem;"><i class="fa-solid fa-screwdriver-wrench"></i> Key Engineering Interventions</h3>
+            <ul class="service-deliverables" style="margin-bottom: 2rem;">
+              <li style="font-size: 1rem; margin-bottom: 0.75rem;">
+                <i class="fa-solid fa-circle-check"></i> <strong>Underwater Pier Foundation Underpinning:</strong> High-pressure grout injection into riverbed scour pits around damaged piers.
+              </li>
+              <li style="font-size: 1rem; margin-bottom: 0.75rem;">
+                <i class="fa-solid fa-circle-check"></i> <strong>High-Strength Steel Truss Replacement:</strong> Fabricated 110m of ASTM A709 Grade 50W weathering steel trusses to restore Old Iron Bridge.
+              </li>
+              <li style="font-size: 1rem; margin-bottom: 0.75rem;">
+                <i class="fa-solid fa-circle-check"></i> <strong>AASHTO HL-93 Heavy Axle Rating:</strong> Dynamic load testing with 45-ton test semi-trailers across all 5 spans.
+              </li>
+              <li style="font-size: 1rem; margin-bottom: 0.75rem;">
+                <i class="fa-solid fa-circle-check"></i> <strong>UHPC Deck Waterproof Overlay:</strong> Applied 50mm Ultra-High Performance Concrete deck layer for 100-year anti-spalling protection.
+              </li>
+            </ul>
+          </div>
+
+          <div class="calc-results-card">
+            <div>
+              <h3 style="color: var(--brand-cyan); margin-bottom: 1.25rem;"><i class="fa-solid fa-truck-ramp-box"></i> Certified Materials Shipped</h3>
+              <div class="calc-metric-row">
+                <span>ASTM A709 Weathering Steel:</span>
+                <span class="calc-metric-val">24,500 Metric Tons</span>
+              </div>
+              <div class="calc-metric-row">
+                <span>1860 MPa High-Tensile Cables:</span>
+                <span class="calc-metric-val">14,200 Meters</span>
+              </div>
+              <div class="calc-metric-row">
+                <span>Elastomeric Seismic Bearings:</span>
+                <span class="calc-metric-val">128 Units</span>
+              </div>
+              <div class="calc-metric-row">
+                <span>UHPC Concrete Deck Additive:</span>
+                <span class="calc-metric-val">4,800 Metric Tons</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+              <a href="index.html#shop" class="btn btn-primary" style="flex: 1;">
+                <i class="fa-solid fa-store"></i> View Materials Catalog
+              </a>
+              <button class="btn btn-secondary" onclick="openConsultationModal('Mosul Bridges Case Study')">
+                <i class="fa-solid fa-handshake"></i> Consult Engineering Lead
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 ApexBridge Heavy Civil & Structural Engineering. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Modal Backdrop Container -->
+  <div id="modalBackdrop" class="modal-backdrop">
+    <div id="modalContent" class="modal-box"></div>
+  </div>
+
+  <!-- Cart Slide-Over Drawer -->
+  <div id="cartBackdrop" class="modal-backdrop" style="z-index: 2090;"></div>
+  <div id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 style="font-size: 1.25rem; font-weight: 700;"><i class="fa-solid fa-cart-shopping" style="color: var(--brand-orange); margin-right: 0.5rem;"></i> Procurement Cart</h3>
+      <button id="closeCartBtn" style="font-size: 1.25rem; color: var(--text-muted);"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div id="cartItemsList" class="cart-items-list"></div>
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+        <span>Subtotal:</span>
+        <strong id="cartSubtotal">$0.00</strong>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; color: var(--brand-orange); font-weight: 800; font-size: 1.15rem;">
+        <span>Total Estimate:</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="openCheckoutModal()">Proceed to Procurement Checkout</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderMosul5Bridges();
+    });
+
+    function renderMosul5Bridges() {
+      const container = document.getElementById('mosulBridgesList');
+      if (!container || !APEX_DATA.mosulBridgesReconstruction) return;
+
+      const bridges = APEX_DATA.mosulBridgesReconstruction.bridges;
+
+      container.innerHTML = bridges.map(b => `
+        <div class="product-card" style="height: 100%;">
+          <div class="product-img-wrapper" style="height: 220px;">
+            <img src="${b.image}" alt="${b.name}">
+            <span class="product-badge" style="background: rgba(0, 210, 148, 0.85); color: #000; border-color: var(--brand-teal);">
+              <i class="fa-solid fa-circle-check"></i> ${b.status}
+            </span>
+          </div>
+          <div class="product-body" style="padding: 1.75rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span class="product-grade" style="font-size: 0.85rem;">${b.number} | Built ${b.builtOriginal} &rarr; Rebuilt ${b.rebuiltYear}</span>
+              <span style="font-weight: 700; color: var(--brand-cyan); font-size: 0.9rem;">${b.length}</span>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; line-height: 1.3;">${b.name}</h3>
+            <p style="font-size: 0.85rem; color: var(--brand-orange); font-weight: 600; margin-bottom: 1rem;">${b.type}</p>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem; flex-grow: 1;">${b.description}</p>
+            
+            <div style="background: var(--bg-primary); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); font-size: 0.85rem; margin-bottom: 1.25rem;">
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 0.5rem;"><i class="fa-solid fa-microchip" style="color: var(--brand-teal);"></i> Structural Engineering Specs:</strong>
+              <ul style="list-style: none; padding-left: 0.5rem;">
+                ${b.engineeringSpecs.map(s => `<li style="margin-bottom: 0.3rem; color: var(--text-secondary);">&bull; ${s}</li>`).join('')}
+              </ul>
+            </div>
+
+            <button class="btn btn-secondary btn-sm" style="width: 100%;" onclick="openConsultationModal('${b.name} Technical Specs')">
+              <i class="fa-solid fa-file-contract"></i> Request Bridge Engineering Blueprint
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+  </script>
+
+</body>
+</html>
